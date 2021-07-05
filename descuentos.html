@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procenjates de descuentos</title>
+</head>
+<body>
+    <h3>Procenjates de descuentos</h3>
+    <p>Segun traller practivo</p>
+
+    <section>
+        <h3>Calcula el precio a pagar de tus productos con descuentos</h3>
+    </section>
+    <form>
+        <label for="InputPrecio">Escribe el precio de tu producto: </label>
+        <input type="number" id="InputPrecio">
+
+        <label for="InputDescuento">Escribe el descuento de tu producto: </label>
+        <input type="number" id="InputDescuento">
+        
+        <button type="button" onclick="onClickBotonPrecioDescuento()"> 
+            Calcular el precio con descuento
+        </button>
+
+        <p id="resultadoPrecio"></p>
+    </form>
+
+
+<script src="./descuentos.js"></script>   
+</body>
+</html>
