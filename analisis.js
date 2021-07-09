@@ -1,15 +1,4 @@
-const salarioChile = chile.map(
-    function (persona) {
-        return persona.salary;
-    }
-);
-
-const salariosChileSorted = salarioChile.sort(
-    function (salarioA, salarioB) {
-        return salarioA - salarioB;
-    }
-)
-
+//helpers
 function esPar(numero) {
     return (numero % 2 === 0);
 }
@@ -24,6 +13,23 @@ function calcularMediaAritmetica(lista) {
     const promedioLista = sumaLista / lista.length;
     return promedioLista;
 }
+
+//
+
+//mediana general
+const salarioChile = chile.map(
+    function (persona) {
+        return persona.salary;
+    }
+);
+
+const salariosChileSorted = salarioChile.sort(
+    function (salarioA, salarioB) {
+        return salarioA - salarioB;
+    }
+)
+
+
 
 
 function mediaSalarios(lista) {
@@ -42,7 +48,20 @@ function mediaSalarios(lista) {
     }
 }
 
+const medianaGeneralChile = mediaSalarios(salariosChileSorted);
+
+const sliceStart = (salariosChileSorted.length * 90) / 100;
+const sliceCount = salariosChileSorted.length - sliceStart;
+
+const salariosChileTop10 = salariosChileSorted.splice(
+    sliceStart,
+    sliceCount
+);
+
+const medianaTopChile = mediaSalarios(salariosChileTop10);
+
 
 console.log(
-    mediaSalarios(salariosChileSorted)
+    medianaGeneralChile,
+    medianaTopChile
 );
